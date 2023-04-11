@@ -23,7 +23,7 @@ function createServer(target) {
   var server = http.createServer(app)
   
   app.get('/', function(req, res) {
-    res.send('Silahkan konek')
+    res.send('Silahkan konek bang')
   })
   server.on('upgrade', function (req, socket, head) {
     req.query = parseQuery(req.url.split('?')[1])
