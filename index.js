@@ -42,12 +42,13 @@ async function start() {
     executablePath: '', //untuk menyambungkan langsung ke chrome. Contoh: "C:/Program Files/Google/Chrome/Application/chrome.exe",
     userDataDir: '', //untuk menyambungkan langsung ke chrome atau custom data. Contoh: "C:/\Users/\USERNAME/\AppData/\Local/\Google/\Chrome/\User Data",
     defaultViewport: { width: 1280, height: 720 },
+    */
     headless: true, //ubah ini ke false jika ingin memantau chrome
     args: [
       '--disable-gpu',
       '--no-sandbox'
     ]
-    */
+    
   })
   const pagesCount = (await browser.pages()).length
   const browserWSEndpoint = await browser.wsEndpoint()
